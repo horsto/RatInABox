@@ -621,7 +621,7 @@ class Agent:
             ):
                 print(
                     f"""WARNING: the size of the trajectory is significantly larger than the environment you are using.
-                    The Environment extent is [minx,maxx,miny,maxy]=[{ex[0]:.1f},{ex[1]:.1f},{ex[2]:.1f},{ex[3]:.1f}], whereas extreme coords are [{min(positions[:,0]):.1f},{max(positions[:,0]):.1f},{min(positions[:,1]):.1f},{max(positions[:,1]):.1f}].
+                    The Environment extent is [minx,maxx,miny,maxy]=[{ex[0]:.2f},{ex[1]:.2f},{ex[2]:.2f},{ex[3]:.2f}], whereas extreme coords are [{min(positions[:,0]):.2f},{max(positions[:,0]):.2f},{min(positions[:,1]):.2f},{max(positions[:,1]):.2f}].
                     Recommended to use larger environment."""
                 )
             self.t_interp = times
@@ -642,7 +642,7 @@ class Agent:
             if (max(positions) > ex[1]) or (min(positions) < ex[0]):
                 print(
                     f"""WARNING: the size of the trajectory is significantly larger than the environment you are using.
-                    The Environment extent is [minx,maxx]=[{ex[0]:.1f},{ex[1]:.1f}], whereas extreme coords are [{min(positions[:,0]):.1f},{max(positions[:,0]):.1f}].
+                    The Environment extent is [minx,maxx]=[{ex[0]:.2f},{ex[1]:.2f}], whereas extreme coords are [{min(positions[:,0]):.2f},{max(positions[:,0]):.2f}].
                     Recommended to use larger environment."""
                 )
             self.t_interp = times
